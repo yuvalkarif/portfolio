@@ -8,7 +8,7 @@ export default function Main() {
         <h1>Hi I'm Yuval Karif </h1>
         <span>Full Stack Web Developer.</span>
         <p>
-          I am a self-taught software engineer who focuses on Web development s
+          I am a self-taught software engineer who focuses on Web development
           and likes to find new ways to solve problems while getting better.
         </p>
       </div>

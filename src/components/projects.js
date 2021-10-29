@@ -30,49 +30,38 @@ function Projects() {
         <div>
           <Content>
             <Image className="preview" pic={data[index].node.frontmatter.img} />
+            <Titles>
+              {data &&
+                data.map((data, i) => {
+                  return (
+                    <Title
+                      selected={index === i}
+                      onClick={() => setIndex(i)}
+                      animate={{ scale: index === i ? 1.25 : 1 }}
+                      style={{ originX: 0 }}
+                      transition={{ duration: 0.15 }}
+                      initial={false}
+                    >
+                      {data.node.frontmatter.browse}
+                    </Title>
+                  )
+                })}
+            </Titles>
             <Description>
-              <h4>{data[index].node.frontmatter.title}</h4>
-              <p>{data[index].node.excerpt}</p>
+              <div>
+                <h4>{data[index].node.frontmatter.title}</h4>
+                <p>{data[index].node.excerpt}</p>
+              </div>
               <Buttons>
-                <a href={data[index].node.frontmatter.live}>
-                  <Button>Live Site</Button>
-                </a>
                 <a href={data[index].node.frontmatter.code}>
                   <AltButton>Code</AltButton>
+                </a>
+                <a href={data[index].node.frontmatter.live}>
+                  <Button>Live Site</Button>
                 </a>
               </Buttons>
             </Description>
           </Content>
-          <Titles>
-            {data &&
-              data.map((data, i) => {
-                return (
-                  <Title
-                    selected={index === i}
-                    onClick={() => setIndex(i)}
-                    // whileHover={{ x: 10 }}
-                    animate={{ scale: index === i ? 1.25 : 1 }}
-                    style={{ originX: 0 }}
-                    transition={{ duration: 0.15 }}
-                  >
-                    {data.node.frontmatter.browse}
-                  </Title>
-                )
-              })}
-          </Titles>
-
-          {/* <p>
-            Follow my blog written using a markdown editor, secure authorization
-            and comment you thoughts.
-          </p>
-          <p>
-            View submissions, enter special codes to gain access to more
-            features and to take part.
-          </p>
-          <p>
-            Let the AI sniff your picture and decide whether it's a dog or a cat
-            !
-          </p> */}
         </div>
       </div>
     </Wrapper>

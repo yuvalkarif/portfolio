@@ -18,7 +18,7 @@ export default function Image({ pic }) {
     return result[0].node.fluid
   }
 
-  return <>{src && <Img fluid={src} alt="Gatsby Docs are awesome" />}</>
+  return <>{src && <Img fluid={src} alt="Project-Preview" />}</>
 }
 
 const query = graphql`
@@ -26,7 +26,7 @@ const query = graphql`
     allImageSharp {
       edges {
         node {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
             originalName
           }

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { sectionWrapper, sectionContent } from "./theme"
 import { motion } from "framer-motion"
 
@@ -12,7 +12,7 @@ export const Wrapper = styled.section`
     ${sectionContent}
     & > div {
       display: flex;
-      justify-content: space-between;
+      /* justify-content: space-between; */
       @media (max-width: 726px) {
         flex-direction: column-reverse;
       }
@@ -21,10 +21,12 @@ export const Wrapper = styled.section`
 `
 
 export const Titles = styled.div`
-  min-width: 30%;
-  margin-left: 2rem;
   padding-top: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 726px) {
+    grid-column: 2;
+  }
 `
 export const Title = styled(motion.h3)`
   color: ${({ theme, selected }) =>
@@ -46,42 +48,69 @@ export const Content = styled.div`
   background-color: #f5f5f5;
   box-shadow: ${({ theme }) => theme.sm};
   padding: 1.5rem;
+  display: grid;
+  /* & > * {
+    width: 100%;
+  } */
+  grid-template-columns: 1;
+  grid-template-rows: 0.25fr 1fr 0.5fr;
+  grid-gap: 1rem;
+  .gatsby-image-wrapper {
+    grid-row: 2 / 2;
+  }
+  @media (min-width: 726px) {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 0.5fr 0.75fr;
+    .gatsby-image-wrapper {
+      grid-row: 1 / span 2;
+    }
+  }
 
-  .preview {
-    max-width: 805px;
-    display: block;
+  img {
+    background-size: contain;
     margin: 0 auto;
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.sm};
   }
 `
 export const Description = styled.div`
-  padding-top: 2rem;
+  @media (min-width: 726px) {
+    grid-row: 2;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 export const Buttons = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 1rem;
 `
-export const Button = styled.button`
+const btn = css`
   border: none;
-  border-radius: 1rem;
+  border-radius: 2rem;
   font-size: 1.2rem;
   font-weight: 700;
-  background: #449aff;
-  box-shadow: ${({ theme }) => theme.DEFAULT};
-  color: ${({ theme }) => theme.mainBg};
   padding: 1rem 1.5rem;
   margin: 0 0.5rem;
+  cursor: pointer;
+  box-shadow: ${({ theme }) => theme.DEFAULT};
+  box-sizing: content-box;
+`
+export const Button = styled.button`
+  ${btn}
+  background: ${({ theme }) => theme.title900};
+  color: ${({ theme }) => theme.mainBg};
+  &:hover {
+    background-color: ${({ theme }) => theme.title700};
+  }
 `
 export const AltButton = styled.button`
-  border: none;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  background: #6e44ff;
-  box-shadow: ${({ theme }) => theme.DEFAULT};
-  color: ${({ theme }) => theme.mainBg};
-  padding: 1rem 1.5rem;
-  margin: 0 0.5rem;
+  ${btn}
+  background: ${({ theme }) => theme.mainBg};
+  color: ${({ theme }) => theme.title900};
+  &:hover {
+    background-color: ${({ theme }) => theme.title50};
+    color: ${({ theme }) => theme.title700};
+  }
 `

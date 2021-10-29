@@ -29,13 +29,7 @@ function Skills() {
       <div>
         <h2>Skills and Tools</h2>
         <div>
-          <motion.ul
-            initial={false}
-            whileHover={{
-              y: -25,
-              transition: { duration: 0.1 },
-            }}
-          >
+          <ul>
             <h5>Frontend</h5>
             <div>
               <li>
@@ -63,7 +57,7 @@ function Skills() {
                 React
               </li>
             </div>
-          </motion.ul>
+          </ul>
           <ul>
             <h5>Backend</h5>
             <div>
@@ -113,16 +107,16 @@ function Skills() {
                 Linux CLI
               </li>
               <li>
+                <PhotoshopIcon className="icon" />
+                Photoshop
+              </li>
+              <li>
                 <NPMIcon className="icon" />
                 NPM
               </li>
               <li>
                 <BabelIcon className="icon" />
                 Babel
-              </li>
-              <li>
-                <PhotoshopIcon className="icon" />
-                Photoshop
               </li>
               <li>
                 <CsharpIcon className="icon" />

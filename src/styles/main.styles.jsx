@@ -3,13 +3,13 @@ import {
   theme,
   titleMain,
   titleAlt,
-  sectionWrapper,
+  firstSectionWrapper,
   sectionContent,
   titlePara,
 } from "./theme"
 
 export const Wrapper = styled.section`
-  ${sectionWrapper}
+  ${firstSectionWrapper}
   padding:0;
   background: linear-gradient(to bottom, #aa00ff, #8c9eff);
   background: ${({ theme }) => theme.gradientPurple};

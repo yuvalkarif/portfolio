@@ -23,7 +23,13 @@ export const theme = {
 }
 
 export const sectionWrapper = css`
-  padding: 10rem 0;
+  min-height: 100vh;
+  padding: 5rem 0;
+  @media (min-width: 726px) {
+    padding: 10rem 0;
+  }
+`
+export const firstSectionWrapper = css`
   min-height: 100vh;
 `
 export const titleSmall = css`
@@ -84,7 +90,12 @@ html {
 h2 {
   ${titleMain};
   margin-bottom: 5rem;
-  max-width: 80%;
+  width: fit-content;
+  @media (max-width: 726px) {
+    text-align:center;
+    margin-bottom: 2rem;
+  }
+ 
 }
 h5 {
   ${titleSmall};
@@ -95,8 +106,9 @@ h3{
   line-height:1 !important; 
 }
 h4{
-  ${titleSmall};
+  ${titleMain};
   color: ${({ theme }) => theme.title700};
+  margin-bottom:1.5rem;
 }
 p{
   ${titlePara};

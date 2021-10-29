@@ -3,8 +3,8 @@ import { sectionWrapper, sectionContent } from "./theme"
 
 export const Wrapper = styled.section`
   .icon {
-    max-width: 2rem;
-    max-height: 2rem;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
     margin-right: 0.5rem;
   }
   ${sectionWrapper}
@@ -27,14 +27,18 @@ export const Wrapper = styled.section`
         flex-direction: column;
         max-width: 20rem;
         width: 100%;
+
         box-shadow: ${({ theme }) => theme.sm};
         div {
           display: flex;
+          font-size: inherit;
+          max-height: 25ch;
           flex-direction: column;
           flex-wrap: wrap;
+          justify-content: flex-start;
 
           & > * {
-            flex: 1 1 0;
+            flex: 1 1 1;
           }
         }
       }
@@ -50,7 +54,6 @@ export const Wrapper = styled.section`
         font-weight: 600;
         font-size: 1.2rem;
         padding-block: 0.25rem;
-        padding-inline: 0 1rem;
       }
     }
   }
