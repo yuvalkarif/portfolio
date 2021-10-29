@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { sectionWrapper, sectionContent } from "./theme"
+import { motion } from "framer-motion"
 
 export const Wrapper = styled.section`
   ${sectionWrapper}
@@ -12,23 +13,29 @@ export const Wrapper = styled.section`
     & > div {
       display: flex;
       justify-content: space-between;
+      @media (max-width: 726px) {
+        flex-direction: column-reverse;
+      }
     }
   }
 `
 
 export const Titles = styled.div`
-  width: 30%;
-  margin: 0 2rem;
+  min-width: 30%;
+  margin-left: 2rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 `
-export const Title = styled.h3`
+export const Title = styled(motion.h3)`
   color: ${({ theme, selected }) =>
     selected ? theme.title900 : theme.title300};
-  font-size: ${({ selected }) => (selected ? "2.5rem" : "2rem")};
+  font-size: ${({ selected }) => (selected ? "2rem" : "2rem")};
   @media (max-width: 726px) {
     font-size: ${({ selected }) => (selected ? "1.75rem" : "1.25rem")};
   }
   cursor: pointer;
-  transition: color 200ms ease;
+  transition: color 150ms ease;
+  margin-bottom: 0.1em;
   :hover {
     color: ${({ theme, selected }) =>
       selected ? theme.title900 : theme.title500};
@@ -41,6 +48,7 @@ export const Content = styled.div`
   padding: 1.5rem;
 
   .preview {
+    max-width: 805px;
     display: block;
     margin: 0 auto;
     border-radius: 1rem;

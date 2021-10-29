@@ -4,6 +4,7 @@ title: "Blog by Karif"
 code: "https://github.com/yuvalkarif/blog-api"
 live: "https://yuvalkarif.github.io/blog-frontend/"
 img: "blog-preview.jpg"
+order: 1
 ---
 
 View, like and add comments to posts, follow users and browse your feed with Karifgram.

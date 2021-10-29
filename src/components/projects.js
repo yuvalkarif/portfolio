@@ -12,30 +12,14 @@ import {
 } from "../styles/projects.styles"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import Image from "../components/image"
 
 function Projects() {
   const {
     allMarkdownRemark: { edges: data },
-  } = useStaticQuery(graphql`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            excerpt(format: PLAIN)
-            frontmatter {
-              title
-              code
-              live
-              img
-              browse
-            }
-          }
-        }
-      }
-    }
-  `)
+  } = useStaticQuery(query)
 
-  const [currentPreview, setCurrentPreview] = useState(data[0].node)
+  const [index, setIndex] = useState(0)
   React.useEffect(() => {
     console.log(data)
   }, [data])
@@ -45,22 +29,36 @@ function Projects() {
         <h2>Projects</h2>{" "}
         <div>
           <Content>
-            {/* <Img fluid={`../images/${currentPreview.frontmatter.img}`} /> */}
+            <Image className="preview" pic={data[index].node.frontmatter.img} />
             <Description>
-              <h4>{currentPreview.frontmatter.title}</h4>
-              <p>{currentPreview.excerpt}</p>
+              <h4>{data[index].node.frontmatter.title}</h4>
+              <p>{data[index].node.excerpt}</p>
               <Buttons>
-                <Button>Live Site</Button>
-                <AltButton>Code</AltButton>
+                <a href={data[index].node.frontmatter.live}>
+                  <Button>Live Site</Button>
+                </a>
+                <a href={data[index].node.frontmatter.code}>
+                  <AltButton>Code</AltButton>
+                </a>
               </Buttons>
             </Description>
           </Content>
           <Titles>
-            <Title selected={true}>Social Media</Title>
-            <Title>Blog</Title>
-            <Title>Forum</Title>
-            <Title>Social Media Viewer</Title>
-            <Title>AI Interface</Title>
+            {data &&
+              data.map((data, i) => {
+                return (
+                  <Title
+                    selected={index === i}
+                    onClick={() => setIndex(i)}
+                    // whileHover={{ x: 10 }}
+                    animate={{ scale: index === i ? 1.25 : 1 }}
+                    style={{ originX: 0 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    {data.node.frontmatter.browse}
+                  </Title>
+                )
+              })}
           </Titles>
 
           {/* <p>
@@ -82,3 +80,22 @@ function Projects() {
 }
 
 export default Projects
+
+const query = graphql`
+  {
+    allMarkdownRemark(sort: { fields: frontmatter___order }) {
+      edges {
+        node {
+          excerpt(format: PLAIN)
+          frontmatter {
+            title
+            code
+            live
+            img
+            browse
+          }
+        }
+      }
+    }
+  }
+`

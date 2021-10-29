@@ -33,6 +33,7 @@ export const Navbar = styled.div`
   width: 100%;
   transition: background-color 200ms ease;
   z-index: 3;
+
   div {
     display: flex;
     justify-content: space-around;
