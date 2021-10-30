@@ -66,10 +66,9 @@ export const Content = styled.div`
   .gatsby-image-wrapper {
     img,
     picture {
-      background-size: contain;
       margin: 0 auto;
       border-radius: 1rem;
-      box-shadow: ${({ theme }) => theme.sm};
+      box-shadow: ${({ theme }) => theme.DEFAULT};
     }
   }
 `

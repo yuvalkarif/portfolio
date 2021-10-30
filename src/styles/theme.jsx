@@ -53,7 +53,7 @@ export const titleProject = css`
     font-weight: 900;
     line-height: 1;
   }
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: ${theme.title900};
   line-height: 1;
@@ -73,12 +73,12 @@ export const titleAlt = css`
 export const titlePara = css`
   @media (min-width: 768px) {
     margin-top: 0.5rem;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
   }
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: ${theme.title300};
   margin-left: 0.25rem;

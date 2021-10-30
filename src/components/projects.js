@@ -24,7 +24,7 @@ function Projects() {
     console.log(data)
   }, [data])
   return (
-    <Wrapper>
+    <Wrapper id={"projects-section"}>
       <div>
         <h2>Projects</h2>{" "}
         <div>

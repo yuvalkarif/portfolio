@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-transformer-remark`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

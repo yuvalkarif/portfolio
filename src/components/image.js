@@ -18,7 +18,7 @@ export default function Image({ pic }) {
     return result[0].node.fluid
   }
 
-  return <>{src && <Img fluid={src} alt="Project-Preview" />}</>
+  return <>{src && <Img fluid={src} alt="image" />}</>
 }
 
 const query = graphql`
@@ -28,6 +28,7 @@ const query = graphql`
         node {
           fluid(quality: 100, fit: CONTAIN) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
             originalName
           }
         }

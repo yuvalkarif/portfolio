@@ -26,7 +26,7 @@ import { Wrapper } from "../styles/skills.styles"
 
 function Skills() {
   return (
-    <Wrapper>
+    <Wrapper id={"skills-section"}>
       <div>
         <h2>Skills and Tools</h2>
         <div>

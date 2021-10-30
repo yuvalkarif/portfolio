@@ -8,7 +8,7 @@ import LocationIcon from "../assets/location.svg"
 
 function Footer() {
   return (
-    <FooterWrapper>
+    <FooterWrapper id={"contact-section"}>
       <div>
         <span>
           <AccountIcon className="footer-icon" />

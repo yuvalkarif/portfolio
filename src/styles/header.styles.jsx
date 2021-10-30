@@ -20,6 +20,11 @@ export const Wrapper = styled.header`
     border-radius: 0.5rem;
     cursor: pointer;
 
+    @media (max-width: 726px) {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
     &:hover {
       background-color: ${({ theme }) => theme.title50};
       color: ${({ theme }) => theme.title700};
@@ -30,6 +35,7 @@ export const Navbar = styled.div`
   background-color: ${({ inView, theme }) => (inView ? "none" : theme.mainBg)};
   box-shadow: ${({ inView, theme }) => (inView ? "none" : `${theme.sm}`)};
   position: fixed;
+  top: 0;
   width: 100%;
   transition: background-color 200ms ease;
   z-index: 3;
