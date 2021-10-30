@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export const Wrapper = styled.section`
   ${sectionWrapper}
-
+  margin-bottom:2rem;
   p {
     color: ${({ theme }) => theme.title500};
   }
@@ -13,7 +13,7 @@ export const Wrapper = styled.section`
     & > div {
       display: flex;
       /* justify-content: space-between; */
-      @media (max-width: 726px) {
+      @media (max-width: 1024px) {
         flex-direction: column-reverse;
       }
     }
@@ -21,10 +21,9 @@ export const Wrapper = styled.section`
 `
 
 export const Titles = styled.div`
-  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  @media (min-width: 726px) {
+  @media (min-width: 1024px) {
     grid-column: 2;
   }
 `
@@ -49,16 +48,14 @@ export const Content = styled.div`
   box-shadow: ${({ theme }) => theme.sm};
   padding: 1.5rem;
   display: grid;
-  /* & > * {
-    width: 100%;
-  } */
+
   grid-template-columns: 1;
   grid-template-rows: 0.25fr 1fr 0.5fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   .gatsby-image-wrapper {
     grid-row: 2 / 2;
   }
-  @media (min-width: 726px) {
+  @media (min-width: 1024px) {
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 0.5fr 0.75fr;
     .gatsby-image-wrapper {
@@ -66,15 +63,18 @@ export const Content = styled.div`
     }
   }
 
-  img {
-    background-size: contain;
-    margin: 0 auto;
-    border-radius: 1rem;
-    box-shadow: ${({ theme }) => theme.sm};
+  .gatsby-image-wrapper {
+    img,
+    picture {
+      background-size: contain;
+      margin: 0 auto;
+      border-radius: 1rem;
+      box-shadow: ${({ theme }) => theme.sm};
+    }
   }
 `
 export const Description = styled.div`
-  @media (min-width: 726px) {
+  @media (min-width: 1024px) {
     grid-row: 2;
   }
   display: flex;
@@ -83,8 +83,11 @@ export const Description = styled.div`
 `
 export const Buttons = styled.div`
   display: flex;
-  justify-content: flex-end;
+  @media (min-width: 1024px) {
+    justify-content: flex-end;
+  }
   margin-top: 1rem;
+  justify-content: center;
 `
 const btn = css`
   border: none;

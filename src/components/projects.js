@@ -53,10 +53,18 @@ function Projects() {
                 <p>{data[index].node.excerpt}</p>
               </div>
               <Buttons>
-                <a href={data[index].node.frontmatter.code}>
+                <a
+                  href={data[index].node.frontmatter.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <AltButton>Code</AltButton>
                 </a>
-                <a href={data[index].node.frontmatter.live}>
+                <a
+                  href={data[index].node.frontmatter.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button>Live Site</Button>
                 </a>
               </Buttons>

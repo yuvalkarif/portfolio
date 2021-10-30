@@ -28,5 +28,6 @@ export const Wrapper = styled.section`
   }
   p {
     ${titlePara}
+    max-width:33ch;
   }
 `

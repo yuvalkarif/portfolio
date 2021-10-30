@@ -20,6 +20,7 @@ import CsharpIcon from "../assets/c-sharp.svg"
 import UnityIcon from "../assets/unity.svg"
 import PhotoshopIcon from "../assets/photoshop.svg"
 import EJSIcon from "../assets/ejs.svg"
+import GraphQLIcon from "../assets/graphql.svg"
 import { motion } from "framer-motion"
 import { Wrapper } from "../styles/skills.styles"
 
@@ -84,6 +85,10 @@ function Skills() {
               <li>
                 <EJSIcon className="icon" />
                 EJS
+              </li>
+              <li>
+                <GraphQLIcon className="icon" />
+                GraphQL
               </li>
             </div>
           </ul>

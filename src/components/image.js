@@ -26,7 +26,7 @@ const query = graphql`
     allImageSharp {
       edges {
         node {
-          fluid(quality: 100) {
+          fluid(quality: 100, fit: CONTAIN) {
             ...GatsbyImageSharpFluid
             originalName
           }

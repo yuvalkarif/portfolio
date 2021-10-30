@@ -24,9 +24,9 @@ export const theme = {
 
 export const sectionWrapper = css`
   min-height: 100vh;
-  padding: 5rem 0;
+  padding-top: 5rem;
   @media (min-width: 726px) {
-    padding: 10rem 0;
+    padding-top: 11rem;
   }
 `
 export const firstSectionWrapper = css`
@@ -46,6 +46,17 @@ export const titleMain = css`
   font-weight: 800;
   color: ${theme.title900};
   line-height: 0.9;
+`
+export const titleProject = css`
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  font-size: 3rem;
+  font-weight: 800;
+  color: ${theme.title900};
+  line-height: 1;
 `
 export const titleAlt = css`
   @media (min-width: 768px) {
@@ -93,6 +104,7 @@ h2 {
   width: fit-content;
   @media (max-width: 726px) {
     text-align:center;
+    margin: 0 auto;
     margin-bottom: 2rem;
   }
  
@@ -106,12 +118,16 @@ h3{
   line-height:1 !important; 
 }
 h4{
-  ${titleMain};
+  ${titleProject};
   color: ${({ theme }) => theme.title700};
   margin-bottom:1.5rem;
+  line-height: 1 !important;
 }
 p{
   ${titlePara};
 }
-
+a{
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
 `

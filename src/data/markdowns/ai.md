@@ -7,4 +7,4 @@ img: "ai-preview.jpg"
 order: 4
 ---
 
-View, like and add comments to posts, follow users and browse your feed with Karifgram.
+Let the AI tell if the picture you uploaded resembles a cat or a dog.
