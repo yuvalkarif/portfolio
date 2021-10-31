@@ -4,8 +4,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Memoji({ pic }) {
   const data = useStaticQuery(query)
-  console.log(data)
-
   return (
     <GatsbyImage
       image={data.file.childImageSharp.gatsbyImageData}

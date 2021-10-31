@@ -24,8 +24,7 @@ import GraphQLIcon from "../assets/graphql.svg"
 import NextJSIcon from "../assets/nextjs.svg"
 import GatsbyIcon from "../assets/gatsby.svg"
 import FigmaIcon from "../assets/figma.svg"
-
-import { motion } from "framer-motion"
+import PugIcon from "../assets/pug.svg"
 import { Wrapper } from "../styles/skills.styles"
 
 function Skills() {
@@ -91,12 +90,16 @@ function Skills() {
                 PassportJS
               </li>
               <li>
-                <FirebaseIcon className="icon" />
-                Firebase
-              </li>
-              <li>
                 <EJSIcon className="icon" />
                 EJS
+              </li>
+              <li>
+                <PugIcon className="icon" />
+                Pug
+              </li>
+              <li>
+                <FirebaseIcon className="icon" />
+                Firebase
               </li>
               <li>
                 <GraphQLIcon className="icon" />

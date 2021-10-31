@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components"
+import { createGlobalStyle, css } from "styled-components"
 import reset from "styled-reset"
 
 export const theme = {
@@ -85,7 +85,7 @@ export const titlePara = css`
   margin-left: 0.25rem;
 `
 export const sectionContent = css`
-  width: 90%;
+  width: 95%;
   max-width: 1400px;
   margin: 0 auto;
 `

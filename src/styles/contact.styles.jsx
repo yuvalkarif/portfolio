@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { firstSectionWrapper, sectionContent } from "./theme"
-import Arrow from "../assets/arrow.svg"
 import { btn } from "./projects.styles"
 export const Wrapper = styled.section`
   ${firstSectionWrapper}
@@ -13,6 +12,11 @@ export const Wrapper = styled.section`
   }
   h3 {
     line-height: 1.2;
+    @media (max-width: 726px) {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
   }
 
   & > div {
@@ -36,17 +40,6 @@ export const Wrapper = styled.section`
   }
 `
 
-export const ArrowIcon = styled(Arrow)`
-  max-width: 125px;
-  * {
-    fill: #aa00ff !important;
-  }
-  position: absolute;
-  left: 25%;
-  transform: rotate3d(0, 0, 1, 90deg);
-  bottom: -7.5rem;
-  /* transform-origin: 50% 50%; */
-`
 export const MailButton = styled.button`
   ${btn}
   background-color:#6138ff;

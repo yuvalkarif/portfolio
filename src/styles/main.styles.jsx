@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import {
-  theme,
   titleMain,
   titleAlt,
   firstSectionWrapper,

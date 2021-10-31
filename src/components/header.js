@@ -8,23 +8,20 @@ export default function Header() {
     threshold: 0,
     rootMargin: "100px",
   })
-  React.useState(() => {
-    console.log(inView)
-  }, [inView])
   return (
     <Wrapper ref={ref}>
       <Navbar inView={inView}>
         <div>
           <strong>Yuval Karif</strong>
-          <span role="button" onClick={() => scrollTo("#skills-section")}>
+          <button type="button" onClick={() => scrollTo("#skills-section")}>
             Skills
-          </span>
-          <span role="button" onClick={() => scrollTo("#projects-section")}>
+          </button>
+          <button type="button" onClick={() => scrollTo("#projects-section")}>
             Projects
-          </span>
-          <span role="button" onClick={() => scrollTo("#contact-section")}>
+          </button>
+          <button type="button" onClick={() => scrollTo("#contact-section")}>
             Contact
-          </span>
+          </button>
         </div>
       </Navbar>
     </Wrapper>

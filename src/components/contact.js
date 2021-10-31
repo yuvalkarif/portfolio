@@ -1,9 +1,5 @@
 import React from "react"
-import {
-  ArrowIcon,
-  BottomContainer,
-  MailButton,
-} from "../styles/contact.styles"
+import { BottomContainer, MailButton } from "../styles/contact.styles"
 import { Wrapper } from "../styles/contact.styles"
 import CopyToClipboard from "react-copy-to-clipboard"
 import { motion } from "framer-motion"
@@ -13,7 +9,7 @@ export default function Contact() {
   const [isCopied, setCopied] = React.useState(false)
 
   const variants = {
-    true: { scale: 1.35, rotate: 0 },
+    true: { scale: 1.15, rotate: 0 },
     false: { scale: 1, rotate: 0 },
   }
   const handleCopied = () => {

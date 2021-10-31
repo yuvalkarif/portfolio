@@ -33,7 +33,7 @@ export const Wrapper = styled.section`
         div {
           display: flex;
           font-size: inherit;
-          max-height: 25ch;
+          max-height: 23ch;
           flex-direction: column;
           flex-wrap: wrap;
           justify-content: flex-start;

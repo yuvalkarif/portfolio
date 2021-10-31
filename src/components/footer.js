@@ -2,7 +2,6 @@ import React from "react"
 import { FooterWrapper } from "../styles/footer.styles"
 import GithubIcon from "../assets/github-icon-white.svg"
 import AccountIcon from "../assets/account.svg"
-import EmailIcon from "../assets/email.svg"
 import LanguageIcon from "../assets/lang.svg"
 import LocationIcon from "../assets/location.svg"
 
