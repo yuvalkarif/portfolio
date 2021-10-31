@@ -8,10 +8,12 @@ import { ThemeProvider } from "styled-components"
 import { theme, GlobalStyle } from "../styles/theme"
 import Main from "../components/main"
 import Contact from "../components/contact"
+import Meta from "../components/meta"
 
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
+      <Meta />
       <GlobalStyle />
       <Header />
       <Main />

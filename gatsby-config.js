@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-transformer-remark`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

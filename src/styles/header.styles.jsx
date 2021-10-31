@@ -38,13 +38,16 @@ export const Wrapper = styled.header`
   }
 `
 export const Navbar = styled.div`
-  background-color: ${({ inView, theme }) => (inView ? "none" : theme.mainBg)};
+  background-color: transparent;
+  background-color: ${({ inView, theme }) =>
+    inView ? "transparent" : theme.mainBg};
   box-shadow: ${({ inView, theme }) => (inView ? "none" : `${theme.sm}`)};
   position: fixed;
   top: 0;
   width: 100%;
   transition: background-color 200ms ease;
   z-index: 3;
+  max-width: 100vw;
 
   div {
     display: flex;

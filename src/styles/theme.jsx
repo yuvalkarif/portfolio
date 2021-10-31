@@ -97,6 +97,8 @@ html {
   background-color: ${({ theme }) => theme.mainBg};
   color: black;
   font-family: "Satoshi", sans-serif;
+  max-width:100vw;
+  overflow-x:hidden;
   
 }
 h2 {

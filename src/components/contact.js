@@ -23,7 +23,7 @@ export default function Contact() {
       <div>
         <h2>Contact me</h2>
         <h3>
-          and lets start our <strong>journey</strong> together!
+          and lets start our journey <strong>together!</strong>
         </h3>
         <BottomContainer>
           <CopyToClipboard text={email} onCopy={handleCopied}>

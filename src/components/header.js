@@ -5,11 +5,12 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 export default function Header() {
   const { ref, inView } = useInView({
-    threshold: 0,
-    rootMargin: "100px",
+    threshold: 1,
+    rootMargin: "82px",
+    initialInView: true,
   })
   return (
-    <Wrapper ref={ref}>
+    <Wrapper ref={ref} className="header-wrapper">
       <Navbar inView={inView}>
         <div>
           <strong>Yuval Karif</strong>
