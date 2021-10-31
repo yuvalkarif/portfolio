@@ -14,10 +14,6 @@ function Footer() {
           <AccountIcon className="footer-icon" />
           Yuval Karif{" "}
         </span>
-        <span>
-          <EmailIcon className="footer-icon" />
-          yuvalkarif3@gmail.com{" "}
-        </span>
         <a
           target="_blank"
           rel="noopener noreferrer"

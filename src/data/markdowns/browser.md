@@ -3,7 +3,7 @@ browse: "Media Browser"
 title: "Karifgram"
 code: "https://github.com/yuvalkarif/web-replica"
 live: "https://yuvalkarif.github.io/web-replica"
-img: "gram-preview.jpg"
+img: "gram-preview"
 order: 3
 ---
 

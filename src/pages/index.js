@@ -7,6 +7,7 @@ import Footer from "../components/footer"
 import { ThemeProvider } from "styled-components"
 import { theme, GlobalStyle } from "../styles/theme"
 import Main from "../components/main"
+import Contact from "../components/contact"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Main />
       <Skills />
       <Projects />
+      <Contact />
       <Footer />
     </ThemeProvider>
   )

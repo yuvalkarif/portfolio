@@ -8,7 +8,8 @@ export const theme = {
   title500: "rgba(0, 0, 0, 0.55)",
   title300: "rgba(0, 0, 0, 0.35)",
   title50: "rgba(0, 0, 0, 0.05)",
-  mainBg: "#fafafa",
+  mainBg: "#ffffff",
+  blockBg: "#fafafa",
   //-----------------------------------Gradients-----------------------------------//
   gradientPurple:
     "linear-gradient(0deg, rgb(236, 187, 214), rgb(186, 177, 244))",

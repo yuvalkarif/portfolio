@@ -3,7 +3,7 @@ browse: "Social Media"
 title: "Mernbook"
 code: "https://github.com/yuvalkarif/mernbook-new"
 live: "https://mernbook-yk.herokuapp.com"
-img: "mernbook-preview.jpg"
+img: "mernbook-preview"
 order: 0
 ---
 

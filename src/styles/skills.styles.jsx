@@ -14,21 +14,22 @@ export const Wrapper = styled.section`
     ${sectionContent}
     & > div {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
 
       ul {
         position: relative;
         margin: 1rem;
-        background-color: #fefefefe;
+        background-color: ${({ theme }) => theme.blockBg};
         padding: 2rem;
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
         max-width: 20rem;
         width: 100%;
-
         box-shadow: ${({ theme }) => theme.sm};
+
         div {
           display: flex;
           font-size: inherit;
@@ -45,7 +46,7 @@ export const Wrapper = styled.section`
       h5 {
         padding: 0 1rem;
         text-align: center;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
       }
       li {
         display: flex;

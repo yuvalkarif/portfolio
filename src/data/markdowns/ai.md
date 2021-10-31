@@ -3,7 +3,7 @@ browse: "AI Client"
 title: "Dog or Cat"
 code: "https://github.com/yuvalkarif/dog-or-cat"
 live: "https://yuvalkarif.github.io/dog-or-cat/"
-img: "ai-preview.jpg"
+img: "ai-preview"
 order: 4
 ---
 

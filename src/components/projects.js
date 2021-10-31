@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import {
   Wrapper,
   Titles,
@@ -11,7 +10,6 @@ import {
   Description,
 } from "../styles/projects.styles"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import Image from "../components/image"
 
 function Projects() {
@@ -20,9 +18,6 @@ function Projects() {
   } = useStaticQuery(query)
 
   const [index, setIndex] = useState(0)
-  React.useEffect(() => {
-    console.log(data)
-  }, [data])
   return (
     <Wrapper id={"projects-section"}>
       <div>
@@ -37,10 +32,14 @@ function Projects() {
                     <Title
                       selected={index === i}
                       onClick={() => setIndex(i)}
-                      animate={{ scale: index === i ? 1.25 : 1 }}
+                      animate={{ scale: index === i ? 1.3 : 1 }}
                       style={{ originX: 0 }}
-                      transition={{ duration: 0.15 }}
+                      transition={{
+                        duration: 0.15,
+                        damping: 20,
+                      }}
                       initial={false}
+                      key={i}
                     >
                       {data.node.frontmatter.browse}
                     </Title>
@@ -58,14 +57,15 @@ function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AltButton>Code</AltButton>
+                  <AltButton role="button">Code</AltButton>
                 </a>
                 <a
                   href={data[index].node.frontmatter.live}
                   target="_blank"
                   rel="noopener noreferrer"
+                  role="button"
                 >
-                  <Button>Live Site</Button>
+                  <Button role="button">Live Site</Button>
                 </a>
               </Buttons>
             </Description>

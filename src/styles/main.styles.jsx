@@ -20,12 +20,17 @@ export const Wrapper = styled.section`
     ${sectionContent}
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    .gatsby-image-wrapper {
+      margin-top: 2rem;
+      max-width: 150px !important;
+    }
     @media (min-width: 1024px) {
       align-items: center;
       flex-direction: row-reverse;
       .gatsby-image-wrapper {
         margin-top: 0;
+        max-width: 250px !important;
       }
     }
     & > div:first-of-type {
@@ -33,9 +38,7 @@ export const Wrapper = styled.section`
     }
     > * {
       flex-grow: 1;
-    }
-    .gatsby-image-wrapper {
-      margin-top: 2rem;
+      margin-inline: 1rem;
     }
   }
   h1 {

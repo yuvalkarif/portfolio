@@ -21,6 +21,10 @@ import UnityIcon from "../assets/unity.svg"
 import PhotoshopIcon from "../assets/photoshop.svg"
 import EJSIcon from "../assets/ejs.svg"
 import GraphQLIcon from "../assets/graphql.svg"
+import NextJSIcon from "../assets/nextjs.svg"
+import GatsbyIcon from "../assets/gatsby.svg"
+import FigmaIcon from "../assets/figma.svg"
+
 import { motion } from "framer-motion"
 import { Wrapper } from "../styles/skills.styles"
 
@@ -56,6 +60,14 @@ function Skills() {
               <li>
                 <ReactIcon className="icon" />
                 React
+              </li>
+              <li>
+                <NextJSIcon className="icon" />
+                NextJS
+              </li>
+              <li>
+                <GatsbyIcon className="icon" />
+                Gatsby
               </li>
             </div>
           </ul>
@@ -116,6 +128,10 @@ function Skills() {
                 Photoshop
               </li>
               <li>
+                <FigmaIcon className="icon" />
+                Figma
+              </li>
+              <li>
                 <NPMIcon className="icon" />
                 NPM
               </li>
@@ -125,7 +141,7 @@ function Skills() {
               </li>
               <li>
                 <CsharpIcon className="icon" />
-                C#{" "}
+                C#
               </li>
               <li>
                 <UnityIcon className="icon" />

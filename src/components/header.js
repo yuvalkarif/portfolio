@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 export default function Header() {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "100px",
   })
@@ -16,9 +16,15 @@ export default function Header() {
       <Navbar inView={inView}>
         <div>
           <strong>Yuval Karif</strong>
-          <span onClick={() => scrollTo("#skills-section")}>Skills</span>
-          <span onClick={() => scrollTo("#projects-section")}>Projects</span>
-          <span onClick={() => scrollTo("#contact-section")}>Contact</span>
+          <span role="button" onClick={() => scrollTo("#skills-section")}>
+            Skills
+          </span>
+          <span role="button" onClick={() => scrollTo("#projects-section")}>
+            Projects
+          </span>
+          <span role="button" onClick={() => scrollTo("#contact-section")}>
+            Contact
+          </span>
         </div>
       </Navbar>
     </Wrapper>

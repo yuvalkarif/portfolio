@@ -35,7 +35,7 @@ export const Title = styled(motion.h3)`
     font-size: ${({ selected }) => (selected ? "1.75rem" : "1.25rem")};
   }
   cursor: pointer;
-  transition: color 150ms ease;
+  transition: color 250ms ease;
   margin-bottom: 0.1em;
   :hover {
     color: ${({ theme, selected }) =>
@@ -43,32 +43,26 @@ export const Title = styled(motion.h3)`
   }
 `
 export const Content = styled.div`
-  border-radius: 1rem;
-  background-color: #f5f5f5;
-  box-shadow: ${({ theme }) => theme.sm};
-  padding: 1.5rem;
   display: grid;
-
   grid-template-columns: 1;
   grid-template-rows: 0.25fr 1fr 0.5fr;
   grid-gap: 2rem;
-  .gatsby-image-wrapper {
+  .preview {
     grid-row: 2 / 2;
   }
   @media (min-width: 1024px) {
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 0.5fr 0.75fr;
-    .gatsby-image-wrapper {
+    .preview {
       grid-row: 1 / span 2;
     }
   }
 
   .gatsby-image-wrapper {
-    img,
-    picture {
+    border-radius: 1rem;
+    box-shadow: ${({ theme }) => theme.xl};
+    img {
       margin: 0 auto;
-      border-radius: 1rem;
-      box-shadow: ${({ theme }) => theme.DEFAULT};
     }
   }
 `
@@ -79,6 +73,9 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 1rem;
+  background-color: ${({ theme }) => theme.blockBg};
+  padding: 2rem;
 `
 export const Buttons = styled.div`
   display: flex;
@@ -88,31 +85,31 @@ export const Buttons = styled.div`
   margin-top: 1rem;
   justify-content: center;
 `
-const btn = css`
+export const btn = css`
   border: none;
-  border-radius: 2rem;
+  border-radius: 1rem;
   font-size: 1.2rem;
   font-weight: 700;
   padding: 1rem 1.5rem;
   margin: 0 0.5rem;
   cursor: pointer;
-  box-shadow: ${({ theme }) => theme.DEFAULT};
+  box-shadow: ${({ theme }) => theme.sm};
   box-sizing: content-box;
 `
 export const Button = styled.button`
   ${btn}
-  background: ${({ theme }) => theme.title900};
+  background:#6138ff;
   color: ${({ theme }) => theme.mainBg};
   &:hover {
-    background-color: ${({ theme }) => theme.title700};
+    filter: brightness(95%);
   }
 `
+// background: linear-gradient(-45deg, #aa00ff, #8c9eff);
 export const AltButton = styled.button`
   ${btn}
   background: ${({ theme }) => theme.mainBg};
   color: ${({ theme }) => theme.title900};
   &:hover {
-    background-color: ${({ theme }) => theme.title50};
-    color: ${({ theme }) => theme.title700};
+    filter: brightness(95%);
   }
 `

@@ -1,21 +1,23 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Memoji({ pic }) {
   const data = useStaticQuery(query)
   console.log(data)
 
-  return <Img fluid={data.file.childImageSharp.fluid} alt="memoji" />
+  return (
+    <GatsbyImage
+      image={data.file.childImageSharp.gatsbyImageData}
+      alt="memoji"
+    />
+  )
 }
 const query = graphql`
   {
     file(relativePath: { eq: "images/memoji.png" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 250, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
-          ...GatsbyImageSharpFluidLimitPresentationSize
-        }
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 90)
       }
     }
   }
