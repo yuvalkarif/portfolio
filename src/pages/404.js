@@ -1,9 +1,9 @@
 import React from "react"
 
 export default function NotFound() {
-  return (
-    <div>
-      <p>Page not Found</p>
-    </div>
-  )
+  if (typeof window !== "undefined") {
+    window.location = "/"
+  }
+
+  return null
 }
