@@ -3,8 +3,8 @@ import { sectionWrapper, sectionContent } from "./theme"
 
 export const Wrapper = styled.section`
   .icon {
-    max-width: 2.25rem;
-    max-height: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
     margin-right: 0.5rem;
   }
   ${sectionWrapper}
@@ -33,14 +33,10 @@ export const Wrapper = styled.section`
         div {
           display: flex;
           font-size: inherit;
-          max-height: 23ch;
+          max-height: 25ch;
           flex-direction: column;
           flex-wrap: wrap;
           justify-content: flex-start;
-
-          & > * {
-            flex: 1 1 1;
-          }
         }
       }
       h5 {
@@ -54,7 +50,7 @@ export const Wrapper = styled.section`
         color: rgba(0, 0, 0, 0.5);
         font-weight: 600;
         font-size: 1.2rem;
-        padding-block: 0.25rem;
+        padding: 0.5rem 0.25rem;
       }
     }
   }
