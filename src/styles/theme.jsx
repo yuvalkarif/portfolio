@@ -43,7 +43,7 @@ export const titleMain = css`
     font-weight: 900;
     line-height: 0.8;
   }
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   color: ${theme.title900};
   line-height: 0.9;
@@ -66,7 +66,7 @@ export const titleAlt = css`
     line-height: 1;
   }
   line-height: 1;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: ${theme.title700};
 `
@@ -105,11 +105,6 @@ h2 {
   ${titleMain};
   margin-bottom: 5rem;
   width: fit-content;
-  @media (max-width: 726px) {
-    text-align:center;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-  }
  
 }
 h5 {

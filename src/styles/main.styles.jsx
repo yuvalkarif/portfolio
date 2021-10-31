@@ -20,9 +20,10 @@ export const Wrapper = styled.section`
     display:flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     .gatsby-image-wrapper {
       margin-top: 2rem;
-      max-width: 150px !important;
+      max-width: 175px !important;
     }
     @media (min-width: 1024px) {
       align-items: center;

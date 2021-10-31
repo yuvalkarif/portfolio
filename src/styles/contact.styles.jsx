@@ -9,6 +9,10 @@ export const Wrapper = styled.section`
   h2 {
     margin-bottom: 0rem;
     text-align: start;
+    @media (max-width: 726px) {
+      text-align: center;
+      margin: 0 auto;
+    }
   }
   h3 {
     line-height: 1.2;
