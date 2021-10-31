@@ -26,6 +26,7 @@ export const Wrapper = styled.section`
     background: linear-gradient(-45deg, #aa00ff, #8c9eff);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     padding: 0.5rem;
     position: relative;
   }

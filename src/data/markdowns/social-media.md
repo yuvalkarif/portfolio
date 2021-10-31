@@ -7,4 +7,4 @@ img: "mernbook-preview"
 order: 0
 ---
 
-Write posts, update your profile, search and follow friends, and browse your feed with Mernbook.
+Write posts, update your profile, search and follow friends and browse your feed with Mernbook.

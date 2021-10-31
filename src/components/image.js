@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { motion } from "framer-motion"
 
 export default function Image({ pic }) {
   const {
