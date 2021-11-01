@@ -19,7 +19,7 @@ export default function Contact() {
     }, 400)
   }
   return (
-    <Wrapper>
+    <Wrapper id={"contact-section"}>
       <div>
         <h2>Contact me</h2>
         <h3>
