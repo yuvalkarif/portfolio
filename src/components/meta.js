@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Image from "../data/images/memoji.png"
+import Image from "../data/images/preview.png"
 function Meta() {
   return (
     <Helmet>
@@ -22,7 +22,7 @@ function Meta() {
         property="og:description"
         content="I am a self-taught software engineer who focuses on web development and likes to find new ways to solve problems."
       />
-      <meta property="og:image" content={Image} />
+      <meta property="og:image" content={`https://yuvalkarif.com${Image}`} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://yuvalkarif.com/" />
@@ -31,7 +31,10 @@ function Meta() {
         property="twitter:description"
         content="I am a self-taught software engineer who focuses on web development and likes to find new ways to solve problems."
       />
-      <meta property="twitter:image" content={Image} />
+      <meta
+        property="twitter:image"
+        content={`https://yuvalkarif.com${Image}`}
+      />
     </Helmet>
   )
 }
