@@ -8,6 +8,7 @@ import {
   AltButton,
   Buttons,
   Description,
+  TitleWrapper,
 } from "../styles/projects.styles"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "../components/image"

@@ -34,7 +34,7 @@ function Skills() {
         <h2>Skills and Tools</h2>
         <div>
           <ul>
-            <h5>Frontend</h5>
+            <h5>Front-end</h5>
             <div>
               <li>
                 <HtmlIcon className="icon" />
@@ -71,7 +71,7 @@ function Skills() {
             </div>
           </ul>
           <ul>
-            <h5>Backend</h5>
+            <h5>Back-end</h5>
             <div>
               <li>
                 <NodeJSIcon className="icon" />
