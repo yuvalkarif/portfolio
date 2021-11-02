@@ -51,7 +51,7 @@ export const Wrapper = styled.section`
   }
   p {
     ${titlePara}
-    max-width:33ch;
+    max-width:48ch;
     margin-left: -0.05em;
   }
 `
