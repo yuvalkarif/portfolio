@@ -9,17 +9,29 @@ function Meta() {
         content="width=device-width, minimum-scale=1, shrink-to-fit=no"
       />
       <title>Yuval Karif</title>
+      <meta name="title" content="Yuval Karif" />
       <meta
         name="description"
-        content="I am a self-taught software engineer who focuses on web development
-          and likes to find new ways to solve problems."
+        content="I am a self-taught software engineer who focuses on web development and likes to find new ways to solve problems."
       />
-      <meta name="og:title" content="Yuval Karif Portfolio" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://yuvalkarif.com/" />
+      <meta property="og:title" content="Yuval Karif" />
       <meta
-        name="og:description"
-        content="A self-taught developer who focuses on fullstack development and likes to find new ways to solve problems."
+        property="og:description"
+        content="I am a self-taught software engineer who focuses on web development and likes to find new ways to solve problems."
       />
-      <meta name="og:image" content={Image} />
+      <meta property="og:image" content={Image} />
+
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://yuvalkarif.com/" />
+      <meta property="twitter:title" content="Yuval Karif" />
+      <meta
+        property="twitter:description"
+        content="I am a self-taught software engineer who focuses on web development and likes to find new ways to solve problems."
+      />
+      <meta property="twitter:image" content={Image} />
     </Helmet>
   )
 }
